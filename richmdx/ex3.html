@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>ex3 (richmdx.ex3)</title><link rel="stylesheet" href="../odoc.css"/><meta charset="utf-8"/><meta name="generator" content="odoc %%VERSION%%"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body class="odoc"><nav class="odoc-nav"><a href="index.html">Up</a> – <a href="index.html">richmdx</a> &#x00BB; ex3</nav><header class="odoc-preamble"><h1 id="example-3"><a href="#example-3" class="anchor"></a>Example 3</h1></header><nav class="odoc-toc"><ul><li><a href="#here's-some-html">Here's some html</a></li></ul></nav><div class="odoc-content"><h2 id="here's-some-html"><a href="#here's-some-html" class="anchor"></a>Here's some html</h2><p>Here I've just cut+n+pasted an HTML table with some styling. Don't do this, generate the HTML from some nice OCaml code!</p><pre class="language-ocaml"><code>let table = {|
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&quot;table100-head&quot;&gt;
+&lt;th class=&quot;column1&quot;&gt;Date&lt;/th&gt;
+&lt;th class=&quot;column2&quot;&gt;Order ID&lt;/th&gt;
+&lt;th class=&quot;column3&quot;&gt;Name&lt;/th&gt;
+&lt;th class=&quot;column4&quot;&gt;Price&lt;/th&gt;
+&lt;th class=&quot;column5&quot;&gt;Quantity&lt;/th&gt;
+&lt;th class=&quot;column6&quot;&gt;Total&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class=&quot;column1&quot;&gt;2017-09-29 01:22&lt;/td&gt;
+&lt;td class=&quot;column2&quot;&gt;200398&lt;/td&gt;
+&lt;td class=&quot;column3&quot;&gt;iPhone X 64Gb Grey&lt;/td&gt;
+&lt;td class=&quot;column4&quot;&gt;$999.00&lt;/td&gt;
+&lt;td class=&quot;column5&quot;&gt;1&lt;/td&gt;
+&lt;td class=&quot;column6&quot;&gt;$999.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;column1&quot;&gt;2017-09-28 05:57&lt;/td&gt;
+&lt;td class=&quot;column2&quot;&gt;200397&lt;/td&gt;
+&lt;td class=&quot;column3&quot;&gt;Samsung S8 Black&lt;/td&gt;
+&lt;td class=&quot;column4&quot;&gt;$756.00&lt;/td&gt;
+&lt;td class=&quot;column5&quot;&gt;1&lt;/td&gt;
+&lt;td class=&quot;column6&quot;&gt;$756.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;column1&quot;&gt;2017-09-26 05:57&lt;/td&gt;
+&lt;td class=&quot;column2&quot;&gt;200396&lt;/td&gt;
+&lt;td class=&quot;column3&quot;&gt;Game Console Controller&lt;/td&gt;
+&lt;td class=&quot;column4&quot;&gt;$22.00&lt;/td&gt;
+&lt;td class=&quot;column5&quot;&gt;2&lt;/td&gt;
+&lt;td class=&quot;column6&quot;&gt;$44.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;column1&quot;&gt;2017-09-25 23:06&lt;/td&gt;
+&lt;td class=&quot;column2&quot;&gt;200392&lt;/td&gt;
+&lt;td class=&quot;column3&quot;&gt;USB 3.0 Cable&lt;/td&gt;
+&lt;td class=&quot;column4&quot;&gt;$10.00&lt;/td&gt;
+&lt;td class=&quot;column5&quot;&gt;3&lt;/td&gt;
+&lt;td class=&quot;column6&quot;&gt;$30.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;column1&quot;&gt;2017-09-24 05:57&lt;/td&gt;
+&lt;td class=&quot;column2&quot;&gt;200391&lt;/td&gt;
+&lt;td class=&quot;column3&quot;&gt;Smartwatch 4.0 LTE Wifi&lt;/td&gt;
+&lt;td class=&quot;column4&quot;&gt;$199.00&lt;/td&gt;
+&lt;td class=&quot;column5&quot;&gt;6&lt;/td&gt;
+&lt;td class=&quot;column6&quot;&gt;$1494.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;column1&quot;&gt;2017-09-23 05:57&lt;/td&gt;
+&lt;td class=&quot;column2&quot;&gt;200390&lt;/td&gt;
+&lt;td class=&quot;column3&quot;&gt;Camera C430W 4k&lt;/td&gt;
+&lt;td class=&quot;column4&quot;&gt;$699.00&lt;/td&gt;
+&lt;td class=&quot;column5&quot;&gt;1&lt;/td&gt;
+&lt;td class=&quot;column6&quot;&gt;$699.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;column1&quot;&gt;2017-09-22 05:57&lt;/td&gt;
+&lt;td class=&quot;column2&quot;&gt;200389&lt;/td&gt;
+&lt;td class=&quot;column3&quot;&gt;Macbook Pro Retina 2017&lt;/td&gt;
+&lt;td class=&quot;column4&quot;&gt;$2199.00&lt;/td&gt;
+&lt;td class=&quot;column5&quot;&gt;1&lt;/td&gt;
+&lt;td class=&quot;column6&quot;&gt;$2199.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;column1&quot;&gt;2017-09-21 05:57&lt;/td&gt;
+&lt;td class=&quot;column2&quot;&gt;200388&lt;/td&gt;
+&lt;td class=&quot;column3&quot;&gt;Game Console Controller&lt;/td&gt;
+&lt;td class=&quot;column4&quot;&gt;$999.00&lt;/td&gt;
+&lt;td class=&quot;column5&quot;&gt;1&lt;/td&gt;
+&lt;td class=&quot;column6&quot;&gt;$999.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;column1&quot;&gt;2017-09-19 05:57&lt;/td&gt;
+&lt;td class=&quot;column2&quot;&gt;200387&lt;/td&gt;
+&lt;td class=&quot;column3&quot;&gt;iPhone X 64Gb Grey&lt;/td&gt;
+&lt;td class=&quot;column4&quot;&gt;$999.00&lt;/td&gt;
+&lt;td class=&quot;column5&quot;&gt;1&lt;/td&gt;
+&lt;td class=&quot;column6&quot;&gt;$999.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;column1&quot;&gt;2017-09-18 05:57&lt;/td&gt;
+&lt;td class=&quot;column2&quot;&gt;200386&lt;/td&gt;
+&lt;td class=&quot;column3&quot;&gt;iPhone X 64Gb Grey&lt;/td&gt;
+&lt;td class=&quot;column4&quot;&gt;$999.00&lt;/td&gt;
+&lt;td class=&quot;column5&quot;&gt;1&lt;/td&gt;
+&lt;td class=&quot;column6&quot;&gt;$999.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;column1&quot;&gt;2017-09-22 05:57&lt;/td&gt;
+&lt;td class=&quot;column2&quot;&gt;200389&lt;/td&gt;
+&lt;td class=&quot;column3&quot;&gt;Macbook Pro Retina 2017&lt;/td&gt;
+&lt;td class=&quot;column4&quot;&gt;$2199.00&lt;/td&gt;
+&lt;td class=&quot;column5&quot;&gt;1&lt;/td&gt;
+&lt;td class=&quot;column6&quot;&gt;$2199.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;column1&quot;&gt;2017-09-21 05:57&lt;/td&gt;
+&lt;td class=&quot;column2&quot;&gt;200388&lt;/td&gt;
+&lt;td class=&quot;column3&quot;&gt;Game Console Controller&lt;/td&gt;
+&lt;td class=&quot;column4&quot;&gt;$999.00&lt;/td&gt;
+&lt;td class=&quot;column5&quot;&gt;1&lt;/td&gt;
+&lt;td class=&quot;column6&quot;&gt;$999.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;column1&quot;&gt;2017-09-19 05:57&lt;/td&gt;
+&lt;td class=&quot;column2&quot;&gt;200387&lt;/td&gt;
+&lt;td class=&quot;column3&quot;&gt;iPhone X 64Gb Grey&lt;/td&gt;
+&lt;td class=&quot;column4&quot;&gt;$999.00&lt;/td&gt;
+&lt;td class=&quot;column5&quot;&gt;1&lt;/td&gt;
+&lt;td class=&quot;column6&quot;&gt;$999.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;column1&quot;&gt;2017-09-18 05:57&lt;/td&gt;
+&lt;td class=&quot;column2&quot;&gt;200386&lt;/td&gt;
+&lt;td class=&quot;column3&quot;&gt;iPhone X 64Gb Grey&lt;/td&gt;
+&lt;td class=&quot;column4&quot;&gt;$999.00&lt;/td&gt;
+&lt;td class=&quot;column5&quot;&gt;1&lt;/td&gt;
+&lt;td class=&quot;column6&quot;&gt;$999.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+|}
+let style = {|
+table {
+ border-spacing:1;
+ border-collapse:collapse;
+ background:#fff;
+ border-radius:10px;
+ overflow:hidden;
+ width:100%;
+ margin:0 auto;
+ position:relative
+}
+table * {
+ position:relative
+}
+table td,
+table th {
+ padding-left:8px
+}
+table thead tr {
+ height:60px;
+ background:#36304a
+}
+table tbody tr {
+ height:50px
+}
+table tbody tr:last-child {
+ border:0
+}
+table td,
+table th {
+ text-align:left
+}
+table td.l,
+table th.l {
+ text-align:right
+}
+table td.c,
+table th.c {
+ text-align:center
+}
+table td.r,
+table th.r {
+ text-align:center
+}
+.table100-head th {
+ font-family:OpenSans-Regular;
+ font-size:18px;
+ color:#fff;
+ line-height:1.2;
+ font-weight:unset
+}
+tbody tr:nth-child(even) {
+ background-color:#f5f5f5
+}
+tbody tr {
+ font-family:OpenSans-Regular;
+ font-size:15px;
+ color:gray;
+ line-height:1.2;
+ font-weight:unset
+}
+tbody tr:hover {
+ color:#555;
+ background-color:#f5f5f5;
+ cursor:pointer
+}
+.column1 {
+ width:260px;
+ padding-left:40px
+}
+.column2 {
+ width:160px
+}
+.column3 {
+ width:245px
+}
+.column4 {
+ width:110px;
+ text-align:right
+}
+.column5 {
+ width:170px;
+ text-align:right
+}
+.column6 {
+ width:222px;
+ text-align:right;
+ padding-right:62px
+}
+|}
+
+let html = Printf.sprintf &quot;&lt;style&gt;%s&lt;/style&gt;%s&quot; style table
+let () = Mime_printer.push &quot;text/html&quot; html</code></pre> <style>
+  table {
+   border-spacing:1;
+   border-collapse:collapse;
+   background:#fff;
+   border-radius:10px;
+   overflow:hidden;
+   width:100%;
+   margin:0 auto;
+   position:relative
+  }
+  table * {
+   position:relative
+  }
+  table td,
+  table th {
+   padding-left:8px
+  }
+  table thead tr {
+   height:60px;
+   background:#36304a
+  }
+  table tbody tr {
+   height:50px
+  }
+  table tbody tr:last-child {
+   border:0
+  }
+  table td,
+  table th {
+   text-align:left
+  }
+  table td.l,
+  table th.l {
+   text-align:right
+  }
+  table td.c,
+  table th.c {
+   text-align:center
+  }
+  table td.r,
+  table th.r {
+   text-align:center
+  }
+  .table100-head th {
+   font-family:OpenSans-Regular;
+   font-size:18px;
+   color:#fff;
+   line-height:1.2;
+   font-weight:unset
+  }
+  tbody tr:nth-child(even) {
+   background-color:#f5f5f5
+  }
+  tbody tr {
+   font-family:OpenSans-Regular;
+   font-size:15px;
+   color:gray;
+   line-height:1.2;
+   font-weight:unset
+  }
+  tbody tr:hover {
+   color:#555;
+   background-color:#f5f5f5;
+   cursor:pointer
+  }
+  .column1 {
+   width:260px;
+   padding-left:40px
+  }
+  .column2 {
+   width:160px
+  }
+  .column3 {
+   width:245px
+  }
+  .column4 {
+   width:110px;
+   text-align:right
+  }
+  .column5 {
+   width:170px;
+   text-align:right
+  }
+  .column6 {
+   width:222px;
+   text-align:right;
+   padding-right:62px
+  }
+  </style>
+  <table>
+  <thead>
+  <tr class="table100-head">
+  <th class="column1">Date</th>
+  <th class="column2">Order ID</th>
+  <th class="column3">Name</th>
+  <th class="column4">Price</th>
+  <th class="column5">Quantity</th>
+  <th class="column6">Total</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td class="column1">2017-09-29 01:22</td>
+  <td class="column2">200398</td>
+  <td class="column3">iPhone X 64Gb Grey</td>
+  <td class="column4">$999.00</td>
+  <td class="column5">1</td>
+  <td class="column6">$999.00</td>
+  </tr>
+  <tr>
+  <td class="column1">2017-09-28 05:57</td>
+  <td class="column2">200397</td>
+  <td class="column3">Samsung S8 Black</td>
+  <td class="column4">$756.00</td>
+  <td class="column5">1</td>
+  <td class="column6">$756.00</td>
+  </tr>
+  <tr>
+  <td class="column1">2017-09-26 05:57</td>
+  <td class="column2">200396</td>
+  <td class="column3">Game Console Controller</td>
+  <td class="column4">$22.00</td>
+  <td class="column5">2</td>
+  <td class="column6">$44.00</td>
+  </tr>
+  <tr>
+  <td class="column1">2017-09-25 23:06</td>
+  <td class="column2">200392</td>
+  <td class="column3">USB 3.0 Cable</td>
+  <td class="column4">$10.00</td>
+  <td class="column5">3</td>
+  <td class="column6">$30.00</td>
+  </tr>
+  <tr>
+  <td class="column1">2017-09-24 05:57</td>
+  <td class="column2">200391</td>
+  <td class="column3">Smartwatch 4.0 LTE Wifi</td>
+  <td class="column4">$199.00</td>
+  <td class="column5">6</td>
+  <td class="column6">$1494.00</td>
+  </tr>
+  <tr>
+  <td class="column1">2017-09-23 05:57</td>
+  <td class="column2">200390</td>
+  <td class="column3">Camera C430W 4k</td>
+  <td class="column4">$699.00</td>
+  <td class="column5">1</td>
+  <td class="column6">$699.00</td>
+  </tr>
+  <tr>
+  <td class="column1">2017-09-22 05:57</td>
+  <td class="column2">200389</td>
+  <td class="column3">Macbook Pro Retina 2017</td>
+  <td class="column4">$2199.00</td>
+  <td class="column5">1</td>
+  <td class="column6">$2199.00</td>
+  </tr>
+  <tr>
+  <td class="column1">2017-09-21 05:57</td>
+  <td class="column2">200388</td>
+  <td class="column3">Game Console Controller</td>
+  <td class="column4">$999.00</td>
+  <td class="column5">1</td>
+  <td class="column6">$999.00</td>
+  </tr>
+  <tr>
+  <td class="column1">2017-09-19 05:57</td>
+  <td class="column2">200387</td>
+  <td class="column3">iPhone X 64Gb Grey</td>
+  <td class="column4">$999.00</td>
+  <td class="column5">1</td>
+  <td class="column6">$999.00</td>
+  </tr>
+  <tr>
+  <td class="column1">2017-09-18 05:57</td>
+  <td class="column2">200386</td>
+  <td class="column3">iPhone X 64Gb Grey</td>
+  <td class="column4">$999.00</td>
+  <td class="column5">1</td>
+  <td class="column6">$999.00</td>
+  </tr>
+  <tr>
+  <td class="column1">2017-09-22 05:57</td>
+  <td class="column2">200389</td>
+  <td class="column3">Macbook Pro Retina 2017</td>
+  <td class="column4">$2199.00</td>
+  <td class="column5">1</td>
+  <td class="column6">$2199.00</td>
+  </tr>
+  <tr>
+  <td class="column1">2017-09-21 05:57</td>
+  <td class="column2">200388</td>
+  <td class="column3">Game Console Controller</td>
+  <td class="column4">$999.00</td>
+  <td class="column5">1</td>
+  <td class="column6">$999.00</td>
+  </tr>
+  <tr>
+  <td class="column1">2017-09-19 05:57</td>
+  <td class="column2">200387</td>
+  <td class="column3">iPhone X 64Gb Grey</td>
+  <td class="column4">$999.00</td>
+  <td class="column5">1</td>
+  <td class="column6">$999.00</td>
+  </tr>
+  <tr>
+  <td class="column1">2017-09-18 05:57</td>
+  <td class="column2">200386</td>
+  <td class="column3">iPhone X 64Gb Grey</td>
+  <td class="column4">$999.00</td>
+  <td class="column5">1</td>
+  <td class="column6">$999.00</td>
+  </tr>
+  </tbody>
+  </table>
+   </div></body></html>
